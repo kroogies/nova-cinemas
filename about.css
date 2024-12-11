@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    width: 100%;
+}
+
+/* Background image styling */
+#nav_bg {
+    width: 100%;
+    height: 68px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Puts the background behind the content */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+
+/* Move logo further right */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 130px; /* Adjust this value to move the logo further right */
+    margin-top: -61px;
+}
+
+/* Move links further left */
+ul {
+    display: flex;
+    list-style: none;
+    margin-left: 650px; /* Adjust this value to move the links further left */
+    margin-top: -59px;
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Change to suit your design */
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Optional hover effect */
+ul li a:hover {
+    color: rgb(128, 82, 3);
+}
+
+#banner {
+    margin-top: 0px;
+    width: 100%;
+}
+
+hr {
+    margin-top: -62px;
+}
+
+.floor1 {
+    width: auto;
+    height: 100vh;
+}
+
+.floor2 {
+    width: auto;
+    height: 100vh;
+}
