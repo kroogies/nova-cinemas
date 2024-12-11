@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #576158; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1A3636; /* Color of the scrollbar thumb */
+    transition: 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(55, 67, 56); /* Color of the scrollbar thumb when hovered */
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('final gradient.svg');
+    background-size: cover; /* Scale to cover the element */
+    background-repeat: no-repeat; /* Avoid tiling */
+    background-position: center; /* Center the image */ 
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+header {
+    position: fixed; /* Keeps the header at the top */
+    height: 70px;
+    top: 0; /* Ensures it sticks to the very top of the screen */
+    width: 100%; /* Ensures the navbar spans the full width */
+    z-index: 1000; /* Keeps the navbar above other elements */
+    background-color: #40534C; /* Add a background color for contrast (adjust to your theme) */
+    opacity: 90%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+#web_lg {
+    padding: 10px;
+    margin-top: -60px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 130px; /* Adjust this value to move the logo further right */
+}
+
+ul {
+    margin-top: -60px;
+    margin-right: 126px;
+    display: flex;
+    list-style: none;
+    margin-left: auto; /* Ensures the links align to the right dynamically */
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+ul li a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: white; /* Adjust color to suit your design */
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    transition: 0.3s ease;
+}
+
+ul li a:hover {
+    color: #edd2a9; /* Optional hover effect */
+}
+
+#tab_hr {
+    width: 80%;
+    height: 2px;
+    background-color: #e0e0e0;
+    border: none;
+    position: absolute; /* Fixes the hr's position */
+    margin-top: 8px; /* Adjust this to move the line up or down */
+    left: 50%; /* Centers the hr */
+    transform: translateX(-50%); /* Corrects the centering */
+}
+
+#title {
+    z-index: 10;
+    margin: 0;
+    margin-left: 190px;
+    padding: 0;
+    margin-top: 115px;
+    height: auto;
+    border: none;
+    background: none;
+    color: rgb(224, 224, 224);
+    font-family: "Raleway", sans-serif;
+    word-spacing: -1px;
+    font-weight: 700;
+    font-size: 30px;
+    transition: color 0.2s ease; /* Smooth color transition */
+}
+
+#mov-poster, #desc {
+    margin-top: 150px;
+}
+
+iframe {
+    position: absolute;
+    top: 186px;
+    margin-left: 488px;
+    width: 27%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#mov-poster {
+    position: absolute; /* Fixes the position */
+    top: 30px;
+    left: 180px;
+    width: 18%;
+    height: auto;
+    border-radius: 10px;
+    cursor: default;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+#desc {
+    position: absolute; /* Fixes the position */
+    top: 285px;
+    left: 490px; /* Adjust as needed */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    word-spacing: 1px;
+    color: rgb(235, 235, 235);
+    width: 412px;
+    height: auto;
+}
+
+.showtimes {
+    z-index: 1000;
+    width: 428px;
+    height: 430px;
+    background-color: #425551;
+    margin-left: 930px;
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+span {
+    color: #edd2a9;
+}
+
+.showtimes h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    transform: translateX(10%);
+    margin-top: 0px;
+    background-color:rgb(87, 103, 89);
+    margin-left: -43px;
+    padding-left: 35px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    width: 428px;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.showtime-container {
+    transform: translateX(37%);
+    margin-top: 30px;
+}
+
+.showtimes button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: white;
+    background-color: #425551;
+    font-size: 18px;
+    text-decoration: none;
+    border: solid;
+    display: inline-block;
+    width: 250px; /* Set desired width */
+    padding: 5px;
+    border-radius: 50px;
+    text-align: center; /* Center-align the text inside */
+    transform: translateX(-66px);
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.showtimes button:hover {
+    background-color: #bdbdbd;
+    color: #40534C;
+}
+

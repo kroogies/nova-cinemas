@@ -1,0 +1,449 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #576158; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1A3636; /* Color of the scrollbar thumb */
+    transition: 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(55, 67, 56); /* Color of the scrollbar thumb when hovered */
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('final gradient.svg');
+    background-size: cover; /* Scale to cover the element */
+    background-repeat: no-repeat; /* Avoid tiling */
+    background-position: center; /* Center the image */ 
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+header {
+    position: fixed; /* Keeps the header at the top */
+    height: 70px;
+    top: 0; /* Ensures it sticks to the very top of the screen */
+    width: 100%; /* Ensures the navbar spans the full width */
+    z-index: 1000; /* Keeps the navbar above other elements */
+    background-color: #40534C; /* Add a background color for contrast (adjust to your theme) */
+    opacity: 90%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+#web_lg {
+    padding: 10px;
+    margin-top: -60px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 130px; /* Adjust this value to move the logo further right */
+}
+
+.navi {
+    margin-top: -60px;
+    margin-right: 126px;
+    display: flex;
+    list-style: none;
+    margin-left: auto; /* Ensures the links align to the right dynamically */
+}
+
+#n1, #n2, #n3, #n4 {
+    margin: 0 15px;
+}
+
+a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: white; /* Adjust color to suit your design */
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #edd2a9; /* Optional hover effect */
+}
+
+span {
+    color: #edd2a9;
+}
+
+.pbar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    position: relative; /* Make the container relative for the line positioning */
+}
+
+.progressbar {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    position: relative; /* For the line positioning */
+}
+
+.progressbar::before {
+    content: "";
+    position: absolute;
+    top: 26%; /* Align the line vertically with the icons */
+    left: 12%;
+    right: 13%;
+    height: 2px; /* Thickness of the line */
+    background-color: white; /* Color of the line */
+    z-index: 0; /* Place the line behind the icons */
+}
+
+.progressbar li {
+    margin: 0 150px;
+    text-align: center;
+    position: relative; /* To place icons above the line */
+    z-index: 1; /* Ensure icons are above the line */
+}
+
+.progressbar img {
+    width: 28px;
+    height: auto;
+    border-radius: 20%; /* Make the image round */
+    border: solid 1px;
+    background-color: #40534C;
+    border-color: white;
+    object-fit: contain; /* Ensures the image covers the circle without distortion */
+    padding: 4px;
+}
+
+#p4 {
+    margin-top: -5px;
+}
+
+p {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 4px;
+    font-size: 10px;
+    cursor: default;
+}
+
+.form-container {
+    position: absolute;
+    margin-top: 32px;
+    margin-left: 340px;
+    width: 400px;
+    padding: 20px;
+    background-color: rgb(87, 103, 89);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.input-group div {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding-bottom: 5px;
+}
+
+.input-group.full-width div {
+    width: 100%; /* Ensure full width for these fields */
+}
+
+label {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+textarea {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc3c3;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    /* Sunken effect */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow */
+    background-color: #f9f9f9; /* Slightly off-white for a sunken look */
+    transition: 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea {
+    height: 80px;
+}
+
+input[type="text"]:hover,
+input[type="tel"]:hover,
+input[type="number"]:hover,
+textarea:hover {
+    background-color: #f0f0f0;
+}
+
+.tickets {
+    position: absolute;
+    width: 400px;
+    height: 415px;
+    background-color: #425551;
+    margin-top: 32px;
+    margin-left: 770px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tickets h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    transform: translateX(10%);
+    margin-top: 0px;
+    background-color:rgb(87, 103, 89);
+    margin-left: -40px;
+    padding-left: 35px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    width: 400px;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-counter {
+    margin-top: 212px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    background-color: #566861;
+}
+
+.ticket-counter button {
+    background-color: #566861;
+    color: white;
+    border: none;
+    padding: 15px 15px;
+    margin: 0px -18px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.ticket-counter button:hover {
+    background-color: #7a988d;
+}
+
+.ticket-counter input {
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: white;
+    margin: 0 10px;
+    cursor: default;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow */
+    background-color: #f9f9f9; /* Slightly off-white for a sunken look */
+}
+
+#submitBTN {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #40534C;
+    transform: translateX(10%);
+    margin-top: -1px;
+    background-color:#D6BD98;
+    margin-left: -40px;
+    padding-left: -20px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    width: 400px;
+    border-radius: 0px 0px 8px 8px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#submitBTN:hover {
+    background-color: #af9a7b;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+}
+
+#prdc {
+    margin-left: 200px;
+}
+
+#qty {
+    margin-left: 140px;
+}
+
+.headers {
+    margin-left: -18px;
+    margin-top: 20px;
+}
+
+#movName {
+    margin-left: 183px;
+    position: absolute;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    width: 150px;
+}
+
+#header_tab {
+    position: absolute;
+    width: 50%;
+    margin-left: 28.5%;
+    margin-top: 32px;
+}
+
+#ver_tab {
+    position: absolute;
+    width: 40%;
+    margin-left: 22.5%;
+    margin-top: 80px;
+    transform: rotate(90deg);
+}
+
+#header_tab, #ver_tab {
+    opacity: 12%;
+}
+
+#ticket_count {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-left: 140px;
+    margin-top: 40px;
+}
+
+#movie, #cinema_number, #screen_time {
+    background-color: rgb(231, 229, 229);
+}
+
+.floor1 {
+    opacity: 100%; /*set to 0 for now to do seats*/
+    transition: 0.2s ease;
+    z-index: 5;
+}
+
+.floor2 {
+    opacity: 0%;
+    transition: 0.2s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.seat-image {
+    width: 50px;  /* Adjust the size */
+    height: 50px;
+}
+
+.booked {
+    opacity: 30%;  /* Booked seats are visually distinct */
+    cursor: not-allowed;
+}
+
+.available {
+    opacity: 1;
+}
+
+.seat-container {
+    display: inline-block;
+    margin: 5px;
+}
+
+#all-seats {
+    position: absolute;
+    margin-left: 375px;
+    margin-top: 20px;
+    background-color: #576158;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding-top: 84px;
+    padding-bottom: 30px;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    font-size: 24px;
+    margin-top: -50px;
+}
+
+/* Ensure cursor is a pointer when hovering over a seat */
+.available:hover {
+    cursor: pointer;
+}
+
+.booked {
+    cursor: not-allowed;
+}
+
+/* Optionally, add a border to indicate a selected seat */
+.selected {
+    border: 2px solid rgb(63, 81, 63);  /* Adjust color as needed */
+}

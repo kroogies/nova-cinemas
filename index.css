@@ -1,0 +1,346 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+    height: 8px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #576158; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1A3636; /* Color of the scrollbar thumb */
+    transition: 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(55, 67, 56); /* Color of the scrollbar thumb when hovered */
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url('final gradient.svg');
+    background-size: cover; /* Scale to cover the element */
+    background-repeat: no-repeat; /* Avoid tiling */
+    background-position: center; /* Center the image */ 
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed; /* Keeps the header at the top */
+    height: 70px;
+    top: 0; /* Ensures it sticks to the very top of the screen */
+    width: 100%; /* Ensures the navbar spans the full width */
+    z-index: 1000; /* Keeps the navbar above other elements */
+    background-color: #40534C; /* Add a background color for contrast (adjust to your theme) */
+    opacity: 90%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+#web_lg {
+    padding: 10px;
+    margin-top: -60px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 130px; /* Adjust this value to move the logo further right */
+}
+
+ul {
+    margin-top: -60px;
+    margin-right: 126px;
+    display: flex;
+    list-style: none;
+    margin-left: auto; /* Ensures the links align to the right dynamically */
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+ul li a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: white; /* Adjust color to suit your design */
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    transition: 0.3s ease;
+}
+
+ul li a:hover {
+    color: #edd2a9; /* Optional hover effect */
+}
+
+#banner {
+    margin-top: 0px;
+    width: 100%;
+    height: 50vh;
+}
+
+.floor1 {
+    width: auto;
+    height: auto;
+    padding-bottom: 30px;
+    padding-top: 140px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    margin-top: -32px;
+    margin-left: 180px;
+}
+
+.search-input {
+    height: 34px;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    outline: none;
+    font-size: 16px;
+    font-family: "Raleway", sans-serif;
+    z-index: 1; /* Ensure it's on top */
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    margin-left: -43px;
+    margin-top: 1px;
+}
+
+.search-button img {
+width: 20px;
+height: 20px;
+}
+
+.tab-container {
+    display: flex;
+    flex-direction: row; /* Align buttons horizontally */
+    justify-content: flex-start;
+    position: relative; /* Ensures absolute positioning works */
+    margin-left: 125px;
+}
+
+#nshowing, #cmsoon {
+    z-index: 10;
+    margin: 0;
+    margin-left: 40px;
+    padding: 0;
+    margin-top: -35px;
+    height: auto;
+    border: none;
+    background: none;
+    color: rgb(224, 224, 224);
+    font-family: "Raleway", sans-serif;
+    word-spacing: -1px;
+    font-weight: 700;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.2s ease; /* Smooth color transition */
+}
+
+#cmsoon:hover {
+    color: #968469; /* Original hover color */
+}
+
+#nshowing:hover {
+    color: #968469; /* Original hover color */
+}
+
+#nshowing {
+    color: #D6BD98;
+    transition: 0.3s ease;
+}
+
+#tab_hr {
+    width: 80%;
+    height: 2px;
+    background-color: #e0e0e0;
+    border: none;
+    position: absolute; /* Fixes the hr's position */
+    margin-top: 8px; /* Adjust this to move the line up or down */
+    left: 50%; /* Centers the hr */
+    transform: translateX(-50%); /* Corrects the centering */
+}
+
+#nwshowing_hr {
+    width: 17%;
+    height: 2px;
+    background-color: #D6BD98;
+    border: none;
+    position: absolute; /* Fixes the hr's position */
+    margin-top: 8px; /* Adjust this to move the line up or down */
+    left: 18.3%; /* Centers the hr */
+    transform: translateX(-50%); /* Corrects the centering */
+    transition: 0.3s ease;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(5, 0.1fr);
+    row-gap: 55px;
+    column-gap: 145px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: -10px;
+    margin-left: -96px;
+    opacity: 100%;
+    position: relative; /* Positioning relative to allow overlapping */
+    z-index: 1; /* Ensure this stays behind */
+    transition: 0.2s ease;
+}
+
+.movie-container {
+    width: 200%;
+    text-align: center;
+    box-sizing: border-box; /* Consistent sizing */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border-radius: 10px;
+}
+
+.movie-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.movie-container h3 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    margin: 10px 0; /* Tighten spacing */
+    color: white;
+}
+
+.movie-container button {
+    font-family: 'Raleway', sans-serif;
+    background-color: #677D6A;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.movie-container button:hover {
+    background-color: #586b5b;
+}
+
+.footer {
+    margin-top: 30px;
+    height: 300px;
+    background-image: url('final final wave.png');
+    background-repeat: no-repeat;
+    background-size: 1600px 180px;
+
+}
+
+.square {
+    width: auto;
+    height: 160px;
+    background-color: #D6BD98;
+    margin-top: 160px;
+}
+
+p {
+    opacity: 0;
+}
+
+/*coming soon movies tab*/
+.coming-soon {
+    display: grid;
+    grid-template-columns: repeat(5, 0.1fr);
+    row-gap: 55px;
+    column-gap: 110px;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 163px;
+    margin-left: -163px;
+    opacity: 0%;
+    position: absolute;
+    top: 0; /* Keeps it aligned with Now Showing section */
+    z-index: 0;
+    width: 116%; /* Ensure it takes up full width */
+    transition: 0.2s ease;
+}
+
+.movie-container-cmsoon {
+    width: 165%;
+    text-align: center;
+    box-sizing: border-box; /* Consistent sizing */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border-radius: 10px;
+}
+
+.movie-container-cmsoon img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: default;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.movie-container-cmsoon h3 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    margin: 10px 0; /* Tighten spacing */
+    color: white;
+}
+
+.movie-container-cmsoon button {
+    font-family: 'Raleway', sans-serif;
+    background-color: #677D6A;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.movie-container-cmsoon h1 {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    margin: 10px 0; /* Tighten spacing */
+    color: white;
+}
